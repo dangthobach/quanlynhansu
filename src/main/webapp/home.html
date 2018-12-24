@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en" xmlns:th="http://www.w3.org/1000/xhtml">
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+		<table>
+				<thead>
+					<tr>
+						
+						<th>ID</th>
+						<th>Name</th>
+						
+					</tr>
+				</thead>
+				<tbody>
+					<tr data-th-each="item : ${list}">
+						
+						<td th:text="${item.buID}"></td>
+						<td th:text="${item.buName}"></td>
+						
+						
+					</tr>
+				</tbody>
+			</table>
+</body>
+</html>

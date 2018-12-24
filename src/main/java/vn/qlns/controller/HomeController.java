@@ -1,9 +1,7 @@
 package vn.qlns.controller;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -14,7 +12,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import vn.qlns.model.Bu;
 import vn.qlns.model.Staff;
 import vn.qlns.service.BuService;
 import vn.qlns.service.StaffService;

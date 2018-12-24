@@ -4,12 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import vn.qlns.model.Staff;
 import vn.qlns.repository.StaffRepository;
 
 
-
+@Service
 public class StaffService {
+	
+	@Autowired
 private StaffRepository staffRepository;
 	
 	public List<Staff> findAll(){
@@ -34,4 +39,6 @@ private StaffRepository staffRepository;
 		staffRepository.deleteById(staff);
 		
 	}
+	
+	
 }

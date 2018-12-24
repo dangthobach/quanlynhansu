@@ -1,7 +1,7 @@
 package vn.qlns.model;
 
 import java.io.Serializable;
-import java.util.Set;
+import java.util.List;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -30,9 +30,9 @@ public class Bu implements Serializable {
 	    @Column(name = "bu_Name")
 	    private String buName;
 	    @OneToMany(mappedBy = "buID", fetch = FetchType.LAZY)
-	    private Set<Project> projectSet;
+	    private List<Project> projectList;
 	    @OneToMany(mappedBy = "buID", fetch = FetchType.LAZY)
-	    private Set<Staff> staffSet;
+	    private List<Staff> staffList;
 
 	    public Bu() {
 	    }
@@ -64,20 +64,20 @@ public class Bu implements Serializable {
 	        this.buName = buName;
 	    }
 
-	    public Set<Project> getProjectSet() {
-	        return projectSet;
+	    public List<Project> getProjectList() {
+	        return projectList;
 	    }
 
-	    public void setProjectSet(Set<Project> projectSet) {
-	        this.projectSet = projectSet;
+	    public void setProjectList(List<Project> projectList) {
+	        this.projectList = projectList;
 	    }
 
-	    public Set<Staff> getStaffSet() {
-	        return staffSet;
+	    public List<Staff> getStaffList() {
+	        return staffList;
 	    }
 
-	    public void setStaffSet(Set<Staff> staffSet) {
-	        this.staffSet = staffSet;
+	    public void setStaffList(List<Staff> staffList) {
+	        this.staffList = staffList;
 	    }
 
 	    @Override

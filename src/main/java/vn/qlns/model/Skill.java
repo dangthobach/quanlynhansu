@@ -1,7 +1,7 @@
 package vn.qlns.model;
 
 import java.io.Serializable;
-import java.util.Set;
+import java.util.List;
 
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
@@ -30,7 +30,7 @@ public class Skill implements Serializable {
 	    @Column(name = "skill_Name")
 	    private String skillName;
 	    @OneToMany(cascade = CascadeType.ALL, mappedBy = "skill", fetch = FetchType.LAZY)
-	    private Set<Experience> experienceSet;
+	    private List<Experience> experienceList;
 
 	    public Skill() {
 	    }
@@ -60,12 +60,12 @@ public class Skill implements Serializable {
 	        this.skillName = skillName;
 	    }
 
-	    public Set<Experience> getExperienceSet() {
-	        return experienceSet;
+	    public List<Experience> getExperienceList() {
+	        return experienceList;
 	    }
 
-	    public void setExperienceSet(Set<Experience> experienceSet) {
-	        this.experienceSet = experienceSet;
+	    public void setExperienceList(List<Experience> experienceList) {
+	        this.experienceList = experienceList;
 	    }
 
 	    @Override

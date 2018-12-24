@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head th:replace="common/header :: common-header" />
+<body>
+	<div class="container">
+		<h2>Quản lý thông tin nhân sự</h2>
+		<form id="app" action="">
+			<div>
+				<input type="text" placeholder="Nhập từ khóa tìm kiếm tại đây" id="search-box">
+				<input type="submit" value="Search" class="action-btn" id="search-btn">
+			</div>
+
+			<div>
+				<table>
+					<thead>
+						<tr>
+							<th id="check"></th>
+							<th id="project">ID</th>
+							<th id="department">Name</th>
+							<th id="name">Age</th>
+							<th id="desc">Description</th>
+							<th id="status"></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr data-th-each="item : ${list}">
+							<td><input type="checkbox"></td>
+							<td th:text="${item.staffID}"></td>
+							<td th:text="${item.staffName}"></td>
+							<td th:text="${item.staffAge}"></td>	
+							<td th:text="${item.descr}"></td>							
+							<td><i class="fa fa-info-circle"></i></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div>
+				<input type="submit" value="Delete" class="action-btn del-btn">
+				<a th:href="@{/add}"><input type="button" value="Add new" class="action-btn"></a>
+				<input type="button" value="Exit" class="action-btn" id="exit-btn">
+			</div>
+		</form>
+	</div>
+	
+	<div th:replace="common/header :: body-bottom-scripts"/>
+</body>
+</html>

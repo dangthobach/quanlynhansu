@@ -1,6 +1,7 @@
 package vn.qlns.model;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.Basic;
@@ -41,7 +42,7 @@ public class Staff implements Serializable {
     @ManyToOne(fetch = FetchType.LAZY)
     private Bu buID;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "staff", fetch = FetchType.LAZY)
-    private Set<Experience> experienceSet;
+    private List<Experience> experienceSet;
 
     public Staff() {
     }
@@ -95,11 +96,11 @@ public class Staff implements Serializable {
         this.buID = buID;
     }
 
-    public Set<Experience> getExperienceSet() {
+    public List<Experience> getExperienceSet() {
         return experienceSet;
     }
 
-    public void setExperienceSet(Set<Experience> experienceSet) {
+    public void setExperienceSet(List<Experience> experienceSet) {
         this.experienceSet = experienceSet;
     }
 

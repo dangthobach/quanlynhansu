@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head th:replace="common/header :: common-header" />
+<body>
+	<div class="container">
+		<h2>Thêm nhân viên</h2>
+		<form id="staff-details" th:action="@{/add}" th:object="${staff}" method="POST">
+			  <div class="row">
+			 <!--	<div class="col-6">
+					<div class="input-group">
+						<label for="" class="lbl-info">Business Unit:</label>
+						<select name="buSelect" th:value="${staff.buID}">
+							<option value="bu1" th:selected="(${staff.buID}=='bu1')">BU 1</option>
+							<option value="bu2" th:selected="(${staff.buID}=='bu2')">BU 2</option>
+							<option value="bu3" th:selected="(${staff.buID}=='bu3')">BU 3</option>
+							<option value="bu4" th:selected="(${staff.buID}=='bu4')">BU 4</option>
+						</select>
+					</div>
+
+					<div class="input-group">
+						<label for="" class="lbl-info">Project:</label>
+						<select name="projectSelect" >
+							<option value="ncis">NCIS</option>
+							<option value="fbi">FBI</option>
+							<option value="cia">CIA</option>
+						</select>
+					</div>
+				</div>
+   -->
+				<div class="col-6">
+					<div class="input-group">
+						<label for="" class="lbl-info">ID:</label>
+						<input type="text" id="staffID" name="staffID" th:field="*{staffID}">
+					</div>
+
+					<div class="input-group">
+						<label for="" class="lbl-info">Name:</label>
+						<input type="text" id="staffID" name="staffID" th:field="*{staffName}">
+					</div>
+					
+					<div class="input-group">
+						<label for="" class="lbl-info">Age:</label>
+						<input type="text" id="staffID" name="staffID" th:field="*{staffAge}">
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-2">
+					Skills:
+				</div>
+
+				<div class="col-10">
+					<div class="row">
+						<div class="col-6">
+							<div class="input-group">
+								<label for="" class="lbl-skill">Java</label>
+								<input type="text" class="input-year" name="javaYear">(years) 
+							</div>
+
+							<div class="input-group">
+								<label for="" class="lbl-skill">PHP</label>
+								<input type="text" class="input-year" name="phpYear">(years)
+							</div>
+
+							<div class="input-group">
+								<label for="" class="lbl-skill">.NET</label>
+								<input type="text" class="input-year" name="netYear">(years)
+							</div>
+						</div>
+
+						<div class="col-6">
+							<div class="input-group">
+								<label for="" class="lbl-skill">iOS</label>
+								<input type="text" class="input-year" name="iosYear" >(years)
+							</div>
+
+							<div class="input-group">
+								<label for="" class="lbl-skill">Android</label>
+								<input type="text" class="input-year" name="androidYear" >(years)
+							</div>
+
+							<div class="input-group">
+								<label for="" class="lbl-skill">Tester</label>
+								<input type="text" class="input-year" name="testYear">(years)
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-2">
+					Description:
+				</div>
+
+				<div class="col-10">
+					<textarea name="descr" id="" placeholder="Mô tả"></textarea>
+				</div>
+			</div>
+
+			<div class="action-area clearfix">
+				<a href="home.html" class="action-btn cancel-btn float-right">Cancel</a>
+				<input type="submit" value="Add" class="action-btn float-right">
+			</div>
+		</form>
+	</div>
+	
+	<div th:replace="common/header :: body-bottom-scripts" />
+</body>
+</html>

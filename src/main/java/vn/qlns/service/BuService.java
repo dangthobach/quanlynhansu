@@ -20,10 +20,10 @@ public class BuService {
 	@Autowired
 	private BuRepository buRepository;
 	
-	public Set<Bu> findAll(){
+	public List<Bu> findAll(){
 		
-		HashSet<Bu> buList = (HashSet<Bu>) buRepository.findAll();
-		Set<Bu> activeBuList = new HashSet<>();
+		ArrayList<Bu> buList = (ArrayList<Bu>) buRepository.findAll();
+		List<Bu> activeBuList = new ArrayList<>();
 		ArrayList array= new ArrayList();
 		buList.forEach(bu->activeBuList.add(bu));
 		

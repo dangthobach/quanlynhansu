@@ -15,9 +15,9 @@
 					<thead>
 						<tr>
 							<th id="check"></th>
-							<th id="project">ID</th>
-							<th id="department">Name</th>
-							<th id="name">Age</th>
+							<th id="project">Bu</th>
+							<th id="department">Project</th>
+							<th id="name">Name_staff</th>
 							<th id="desc">Description</th>
 							<th id="status"></th>
 						</tr>
@@ -25,9 +25,9 @@
 					<tbody>
 						<tr data-th-each="item : ${list}">
 							<td><input type="checkbox"></td>
-							<td th:text="${item.staffID}"></td>
-							<td th:text="${item.staffName}"></td>
-							<td th:text="${item.staffAge}"></td>	
+							<td th:text="${item.bu_Name}"></td>
+							<td th:text="${item.project_Name}"></td>
+							<td th:text="${item.staff_Name}"></td>	
 							<td th:text="${item.descr}"></td>							
 							<td><i class="fa fa-info-circle"></i></td>
 						</tr>

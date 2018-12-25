@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import vn.qlns.model.Bu;
 import vn.qlns.model.Staff;
+import vn.qlns.model.StaffDTO;
 import vn.qlns.service.BuService;
 import vn.qlns.service.StaffService;
 
@@ -26,8 +28,8 @@ public class HomeController {
 	
 	@RequestMapping("/")
 	public String listAll(Model model) {
-		List<Staff> list= new ArrayList<Staff>();
-		list= (List<Staff>) staffService.findAll();
+		
+		List<StaffDTO> list= buService.listAll();
 		model.addAttribute("list", list);
 		return "home";
 	}
@@ -35,7 +37,7 @@ public class HomeController {
 	@RequestMapping("/add")
 	public String add(Model model) {
 		Staff staff= new Staff();
-		model.addAttribute("list", staff);
+		model.addAttribute("staff", staff);
 		return "addStaff";
 	}
 	
@@ -44,6 +46,8 @@ public class HomeController {
 		staffService.save(staff);
 		return "addStaff";
 	}
+	
+	
 	
 	
 }

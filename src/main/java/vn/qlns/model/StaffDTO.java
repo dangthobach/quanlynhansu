@@ -1,61 +1,47 @@
 package vn.qlns.model;
 
 public class StaffDTO {
-	private String proj_name;
-	private String bu_name;
-	private String staff_name;
-	private String desc;
-	
-	
-	public StaffDTO(String proj_name, String bu_name, String staff_name, String desc) {
+	private String project_Name;
+	private String bu_Name;
+	private String staff_Name;
+	private String descr;
+
+	public StaffDTO() {
 		super();
-		this.proj_name = proj_name;
-		this.bu_name = bu_name;
-		this.staff_name = staff_name;
-		this.desc = desc;
 	}
 
-
-	public String getProj_name() {
-		return proj_name;
+	public String getProject_Name() {
+		return project_Name;
 	}
 
-
-	public void setProj_name(String proj_name) {
-		this.proj_name = proj_name;
+	public void setProject_Name(String project_Name) {
+		this.project_Name = project_Name;
 	}
 
-
-	public String getBu_name() {
-		return bu_name;
+	public String getBu_Name() {
+		return bu_Name;
 	}
 
-
-	public void setBu_name(String bu_name) {
-		this.bu_name = bu_name;
+	public void setBu_Name(String bu_Name) {
+		this.bu_Name = bu_Name;
 	}
 
-
-	public String getStaff_name() {
-		return staff_name;
+	public String getStaff_Name() {
+		return staff_Name;
 	}
 
-
-	public void setStaff_name(String staff_name) {
-		this.staff_name = staff_name;
+	public void setStaff_Name(String staff_Name) {
+		this.staff_Name = staff_Name;
 	}
 
-
-	public String getDesc() {
-		return desc;
+	public String getDescr() {
+		return descr;
 	}
 
-
-	public void setDesc(String desc) {
-		this.desc = desc;
+	public void setDescr(String descr) {
+		this.descr = descr;
 	}
+
 	
-	
-	
-	
+
 }

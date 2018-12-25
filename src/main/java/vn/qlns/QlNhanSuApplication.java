@@ -11,6 +11,7 @@ import vn.qlns.service.BuService;
 
 @SpringBootApplication
 public class QlNhanSuApplication implements CommandLineRunner {
+	
 	BuService departmentService;
 	public static void main(String[] args) {
 		SpringApplication.run(QlNhanSuApplication.class, args);
@@ -19,7 +20,7 @@ public class QlNhanSuApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
-		//departmentService.findAll().forEach(item->System.out.println(item));
+		
 	}
 
 	

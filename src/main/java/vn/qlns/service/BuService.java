@@ -50,7 +50,7 @@ public class BuService {
 
 		String sql = "SELECT b.bu_Name,p.project_Name, s.staff_Name, s.descr FROM Bu b inner join Project p on b.bu_id=p.bu_id inner join Staff s on b.bu_id=s.bu_id";
 		List<StaffDTO> list = entityManager.createNativeQuery(sql).unwrap(org.hibernate.query.Query.class)
-				.setResultTransformer( Transformers.aliasToBean( StaffDTO.class ) )
+				.setResultTransformer( Transformers.aliasToBean( StaffDTO.class ))
 				.getResultList();
 //		ArrayList<StaffDTO> arr = new ArrayList<StaffDTO>();
 //		for (Object object : list) {
@@ -63,4 +63,27 @@ public class BuService {
 //		}
 		return list;
 	}
+	
+	
+	public List<StaffDTO> findbyFields(String key) {
+
+		List<StaffDTO> list= new ArrayList<StaffDTO>();
+		if (key==null) {
+			 list = entityManager.createNativeQuery("SELECT b.bu_Name,p.project_Name, s.staff_Name, s.descr FROM quanlynhansu.bu b inner join quanlynhansu.project p on b.bu_ID=p.bu_ID inner join quanlynhansu.staff s on b.bu_ID=s.bu_ID")
+					 .unwrap(org.hibernate.query.Query.class)
+					.setResultTransformer( Transformers.aliasToBean( StaffDTO.class ))
+					.getResultList();
+		}
+		else {
+			 list = entityManager.createNativeQuery("SELECT b.bu_Name,p.project_Name, s.staff_Name, s.descr FROM quanlynhansu.bu b inner join quanlynhansu.project p on b.bu_ID=p.bu_ID inner join quanlynhansu.staff s on b.bu_ID=s.bu_ID where p.project_Name like :a")
+					 .setParameter("a", "%"+key+"%")
+					 .unwrap(org.hibernate.query.Query.class)
+					.setResultTransformer(Transformers.aliasToBean( StaffDTO.class ))
+					.getResultList();
+		}
+		
+
+		return list;
+	}
+	
 }

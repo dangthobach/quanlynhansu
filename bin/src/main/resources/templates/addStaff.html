@@ -6,7 +6,7 @@
 		<h2>Thêm nhân viên</h2>
 		<form id="staff-details" th:action="@{/add}" th:object="${staff}" method="POST">
 			  <div class="row">
-				<div class="col-6">
+			 <!--	<div class="col-6">
 					<div class="input-group">
 						<label for="" class="lbl-info">Business Unit:</label>
 						<select name="buSelect" th:value="${staff.buID}">
@@ -26,21 +26,21 @@
 						</select>
 					</div>
 				</div>
-   
+   -->
 				<div class="col-6">
 					<div class="input-group">
 						<label for="" class="lbl-info">ID:</label>
-						<input type="text" id="staffID" name="staffID" th:field="*{staffID}" required>
+						<input type="text" id="staffID" name="staffID" th:field="*{staffID}">
 					</div>
 
 					<div class="input-group">
 						<label for="" class="lbl-info">Name:</label>
-						<input type="text" id="staffID" name="staffID" th:field="*{staffName}" required>
+						<input type="text" id="staffID" name="staffID" th:field="*{staffName}">
 					</div>
 					
 					<div class="input-group">
 						<label for="" class="lbl-info">Age:</label>
-						<input type="text" id="staffID" name="staffID" th:field="*{staffAge}" required>
+						<input type="text" id="staffID" name="staffID" th:field="*{staffAge}">
 					</div>
 				</div>
 			</div>

@@ -1,0 +1,151 @@
+﻿html, body{
+	width: 100%;
+	height: 100%;
+}
+
+h2{
+	text-align: center;
+	text-transform: uppercase;
+	margin: 50px 0 30px;
+	font-weight: bold;
+	color: #4caf50;
+}
+
+#app{
+	width: 900px;
+    margin: 0 auto;
+    font-size: 14px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#app div:not(:last-child){
+	margin-bottom: 50px;
+}
+
+#search-box{
+	width: 70%;
+    height: 30px;
+    padding: 5px;
+}
+
+table{
+	width: 100%;
+	border: 1px solid black;
+}
+
+th, td{
+	border: 1px solid black;
+	text-align: center;
+	padding: 5px 0px;
+}
+
+th#check, th#status{
+	width: 5%;
+}
+
+th#bu-name{
+	width: 15%;
+}
+
+th#project-name{
+	width: 20%;
+}
+
+th#staff-name{
+	width: 25%;
+}
+
+thead{
+	background-color: #4caf50;
+	color: #fff;
+}
+
+.action-btn{
+	width: 80px;
+	height: 30px;
+    padding: 7px 5px;
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    line-height: 1;
+}
+
+.action-btn:hover{
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+#exit-btn, #search-btn{
+	float: right;
+}
+
+#staff-details{
+	border: 1px solid black;
+    padding: 10px;
+    font-size: 14px;
+    margin: 50px auto;
+    width: 800px;
+}
+
+#staff-details .input-group{
+	margin-bottom: 20px;
+}
+
+.lbl-info{
+	width: 125px;
+	height: 25px;
+	margin: 0px 10px 0px 0px;
+	line-height: 25px;
+}
+
+#staff-details select{
+	width: 120px;
+}
+
+#input-name{
+	width: 200px;
+	height: 25px;
+}
+
+#input-age{
+	width: 50px;
+	height: 25px;
+}
+
+input[type=checkbox]{
+	display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 5px 5px 0px 0px;
+}
+
+
+.lbl-skill{
+	margin-bottom: 0px;
+	width: 50px;
+	height: 25px;
+	line-height: 25px;
+}
+
+.input-year{
+	margin: 0px 5px;
+}
+
+textarea{
+	width: 100%;
+	height: 100px;
+	padding: 5px;
+}
+
+#action-area{
+	margin-top: 25px;
+}
+
+.del-btn{
+	margin-right: 10px;
+}
+
+#cancel-btn{
+	margin-left: 10px;
+}

@@ -2,13 +2,14 @@
 <html lang="en" xmlns:th="www.thymeleaf.org">
 <head th:replace="common/header :: common-header" />
 <body>
-	<div th:replace="common/header :: search" />
 	<div class="container">
-		<form id="app">
-			<div th:if="${emptyList}">
-					<h5 style="font-style: italic;">Oops, no result is found. Try
-						something else or try again later.</h5>
-				</div>
+		<h2>Quản lý thông tin nhân sự</h2>
+		<form id="app" action="">
+			<div>
+				<input type="text" placeholder="Nhập từ khóa tìm kiếm tại đây" id="search-box">
+				<input type="submit" value="Search" class="action-btn" id="search-btn">
+			</div>
+
 			<div>
 				<table>
 					<thead>
@@ -22,7 +23,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr data-th-each="item : ${staffList}">
+						<tr data-th-each="item : ${list}">
 							<td><input type="checkbox"></td>
 							<td th:text="${item.bu_Name}"></td>
 							<td th:text="${item.project_Name}"></td>

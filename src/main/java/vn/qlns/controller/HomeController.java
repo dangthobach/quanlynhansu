@@ -47,6 +47,7 @@ public class HomeController {
 	
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public String addStaff(@ModelAttribute("staff") Staff staff, HttpServletRequest request) {
+		
 		staffService.save(staff);
 		return "addStaff";
 	}
